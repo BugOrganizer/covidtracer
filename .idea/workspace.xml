@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfe9d110-e159-47d9-8890-77f1595ba11e" name="Default Changelist" comment="" />
+    <list default="true" id="bfe9d110-e159-47d9-8890-77f1595ba11e" name="Default Changelist" comment="Commit 2">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coronatracer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coronatracer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/covid19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/covid19.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Covid19.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,25 +39,38 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Sid &lt;ajwadax@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1baS3lBg1QTk3tu0ImctsNl2r3W" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/gson-2.8.2.jar!/" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/unirest-java-1.4.7.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunManager">
-    <configuration name="covid19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="coronavirus.covid19" />
+    <configuration name="Covid19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="coronavirus.Covid19" />
       <module name="coronatracer" />
       <extension name="coverage">
         <pattern>
@@ -47,7 +84,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.covid19" />
+        <item itemvalue="Application.Covid19" />
       </list>
     </recent_temporary>
   </component>
@@ -62,6 +99,80 @@
       <option name="presentableId" value="Default" />
       <updated>1588868516392</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit 2">
+      <created>1588970546289</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588970546289</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="166" y="0" width="1028" height="744" key="#Project_Structure" timestamp="1589007735832">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="166" y="0" width="1028" height="744" key="#Project_Structure/0.0.1366.744@0.0.1366.744" timestamp="1589007735832" />
+    <state x="141" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588971062884">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="141" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.744@0.0.1366.744" timestamp="1588971062884" />
+    <state x="491" y="92" width="378" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1588976443020">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="491" y="92" width="378" height="562" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1588976443020" />
+    <state x="415" y="163" width="529" height="415" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588971061694">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="415" y="163" width="529" height="415" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.744@0.0.1366.744" timestamp="1588971061694" />
+    <state x="513" y="99" width="328" height="546" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1589007732095">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="513" y="99" width="328" height="546" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1366.744@0.0.1366.744" timestamp="1589007732095" />
+    <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl" timestamp="1588982759152">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1588982759152" />
+    <state width="1324" height="258" key="GridCell.Tab.0.bottom" timestamp="1589009500383">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1324" height="258" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1589009500383" />
+    <state width="1324" height="258" key="GridCell.Tab.0.center" timestamp="1589009500382">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1324" height="258" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1589009500382" />
+    <state width="1324" height="258" key="GridCell.Tab.0.left" timestamp="1589009500381">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1324" height="258" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1589009500381" />
+    <state width="1324" height="258" key="GridCell.Tab.0.right" timestamp="1589009500382">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1324" height="258" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1589009500382" />
+    <state x="172" y="8" key="SettingsEditor" timestamp="1589009711696">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="172" y="8" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1589009711696" />
+    <state x="353" y="267" width="648" height="210" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589007713200">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="353" y="267" width="648" height="210" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.744@0.0.1366.744" timestamp="1589007713200" />
   </component>
 </project>
