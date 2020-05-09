@@ -4,11 +4,8 @@ public interface Elements {
 
     public void getMainPage() throws Exception;
     public void getTitleBar(String text, String sym, int len) throws Exception;
-    public void getDisplayBox(String text1, String text2, String text3,
-                              String text4, int len) throws Exception ;
-
-    public void getTable(String text1, String text2, String text3, String text4,
-                         String text5,int len);
+    public void getDisplayBox(String t1, String t2, String t3, String t4, int len) throws Exception ;
+    public void getList(String t1, String t2, String t3, String t4, String t5,int len) throws Exception;
 
 
 }

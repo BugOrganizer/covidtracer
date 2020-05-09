@@ -1,77 +1,72 @@
 package coronavirus;
 
-import coronavirus.data.*;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import com.google.gson.Gson;
+import coronavirus.internationaldata.*;
+import org.apache.commons.io.IOUtils;
+import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import com.google.gson.Gson;
 
 public class Coronavirus {
 
-    private static final String BASE_URL = "https://api.kawalcorona.com/";
+    private static final String BASE_URL = "https://api.covid19api.com/";
     private static final Gson gson = new Gson();
 
     /*
-		@getGlobalCases mengembalikan Array object yang berisi
-		object GlobalData.
-    */
-
-    public GlobalCases[] getGlobalCases() throws Exception {
-        return gson.fromJson(getPage(BASE_URL), GlobalCases[].class);
+     * @getSummary mengembalikan data berupa object Summary yang berisi
+     * object Global dan array object Countries
+     * */
+    private Summary getSummary() throws Exception {
+        return gson.fromJson(getJson("summary"), Summary.class);
     }
 
     /*
-		@getIndonesia mengembalikan object Indonesia yang berisi
-		data positif, sembuh dan meninggal di NKRI
-    */
+     * @getGlobalCases mengembalikan data berupa object global yang berisi data cases
+     * positif, death dan recovered
+     * */
 
-    public Indonesia getIndonesia() throws Exception {
-        return gson.fromJson(getPage(getJson("indonesia")), Indonesia.class);
+    public Global getGlobalLatest() throws Exception {
+        Summary x = getSummary();
+        return x.getGlobal();
     }
 
     /*
-		@getWorldCured mengembalikan object WorldCured yang berisi data
-		orang sembud covid19 sedunia
-    */
-
-    public WorldCured getWorldCured() throws Exception {
-        return gson.fromJson(getJson("sembuh"), WorldCured.class);
+     * @getCountryAll mengembalikan data berupa array of object dari Countries
+     * yang berisi data dari seluruh negara di dunia.
+     * */
+    public Countries[] getCountryAll() throws Exception {
+        return getSummary().getCountries();
     }
 
     /*
-		@getWorldDeaths mengembalikan object WorldDeaths yang berisi data
-		orang meninggal dari covid19 sedunia
-    */
-
-    public WorldDeaths getWorldDeaths() throws Exception {
-        return gson.fromJson(getJson("meninggal"), WorldDeaths.class);
+     * getByCountry(flag) mengembalikan data berupa object country yang memuat informasi terkini
+     * terkait kasus covid 19 disuatu negara.
+     * */
+    public Country getByCountry(String flag) throws Exception {
+        Country[] country = gson.fromJson(getJson("country/" + flag), Country[].class);
+        return country[country.length - 1];
     }
 
     /*
-		@getWorldPositif mengembalikan object WorldPositif yang berisi data
-		orang yang positif terkena Covid19 di Dunia
-    */
-
-    public WorldPositif getWorldPositif() throws Exception {
-        return gson.fromJson(getJson("positif"), WorldPositif.class);
+     * getIndonesiaLatest() mengembalikan data berupa object country yang memuat data terkini covid 19
+     * di Indonesia.
+     * */
+    public Country getIndonesiaLatest() throws Exception {
+        Country[] country = gson.fromJson(getJson("country/indonesia"), Country[].class);
+        return country[country.length - 1];
     }
-
 
     private static String getJson(String endpoint) throws Exception {
         String URL = BASE_URL + endpoint;
         return getPage(URL);
     }
 
-    private static String getPage(String url) throws Exception{
-        URL url1 = new URL(url);
-        URLConnection connection = url1.openConnection();
-        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 5.1; rv:19.0) Gecko/20100101 Firefox/19.0");
-        connection.connect();
-        BufferedReader serverResponse = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-        String response = serverResponse.readLine();
-        serverResponse.close();
-        return response;
+    public static String  getPage(String url) throws Exception {
+        URL urls = new URL(url);
+        URLConnection con = urls.openConnection();
+        InputStream in = con.getInputStream();
+        String encoding = con.getContentEncoding();
+        encoding = encoding == null ? "UTF-8" : encoding;
+        return IOUtils.toString(in, encoding) ;
     }
-
 }
