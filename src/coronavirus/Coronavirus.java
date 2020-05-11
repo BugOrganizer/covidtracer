@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class Coronavirus {
+public class Coronavirus extends Pandemic {
 
     private static final String BASE_URL = "https://api.covid19api.com/";
     private static final Gson gson = new Gson();
@@ -16,7 +16,7 @@ public class Coronavirus {
      * @getSummary mengembalikan data berupa object Summary yang berisi
      * object Global dan array object Countries
      * */
-    private Summary getSummary() throws Exception {
+    public Summary getSummary() throws Exception {
         return gson.fromJson(getJson("summary"), Summary.class);
     }
 

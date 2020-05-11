@@ -31,10 +31,18 @@ public class WriteDisplay extends Display {
         display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
     }
 
+    public void getIndonesiaTable() throws Exception {
+        Country c = coronavirus.getIndonesiaLatest();
+        display.getTitleBar("DATA NEGARA INDONESIA","-",90);
+        display.getList("NEGARA","POSITIF","DEATH","SEMBUH","UPDATE",120);
+        display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
+    }
+
     public void getWorldLiveBox() throws Exception {
         Global global = coronavirus.getGlobalLatest();
         display.getDisplayBox("POSITIVE","MENINGGAL",global.getTotalConfirmed(),global.getTotalDeaths(),100);
     }
+
 
 
 }
