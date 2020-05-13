@@ -3,7 +3,7 @@ package coronavirus.display;
 public class Display implements Elements{
 
     @Override
-    public void getMainPage() throws Exception {
+    public void getMainPage() {
         System.out.print("\n" +
                 " ██████  ██████  ██    ██ ██ ██████      ████████ ██████   █████   ██████ ███████ \n" +
                 "██      ██    ██ ██    ██ ██ ██   ██        ██    ██   ██ ██   ██ ██      ██      \n" +
@@ -17,15 +17,43 @@ public class Display implements Elements{
                 "yang disebabkan oleh virus Severe Acute Respiratory Syndrome-related Coronavirus 2\n" +
                 "silahkan cumut di github.com/annurdien/covidtracer\n";
         System.out.print(text);
-//        for (int i=0;i<text.length();i++){
-//            System.out.print(text.charAt(i));
-//            Thread.sleep(50);
-//        }
-
     }
 
     @Override
-    public void getTitleBar(String text, String sym, int len) throws Exception {
+    public void getWarning(){
+        System.out.print("\n");
+        System.out.println("\n" +
+                "  _____                       _ \n" +
+                " | ____|_ __ _ __ ___  _ __  | |\n" +
+                " |  _| | '__| '__/ _ \\| '__| | |\n" +
+                " | |___| |  | | | (_) | |    |_|\n" +
+                " |_____|_|  |_|  \\___/|_|    (_)\n" +
+                "                                \n");
+    }
+
+    @Override
+    public void getGoodby() throws Exception{
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("\n" +
+                " $$$$$$\\                            $$\\ $$\\                       $$\\ \n" +
+                "$$  __$$\\                           $$ |$$ |                      $$ |\n" +
+                "$$ /  \\__| $$$$$$\\   $$$$$$\\   $$$$$$$ |$$$$$$$\\  $$\\   $$\\       $$ |\n" +
+                "$$ |$$$$\\ $$  __$$\\ $$  __$$\\ $$  __$$ |$$  __$$\\ $$ |  $$ |      $$ |\n" +
+                "$$ |\\_$$ |$$ /  $$ |$$ /  $$ |$$ /  $$ |$$ |  $$ |$$ |  $$ |      \\__|\n" +
+                "$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |          \n" +
+                "\\$$$$$$  |\\$$$$$$  |\\$$$$$$  |\\$$$$$$$ |$$$$$$$  |\\$$$$$$$ |      $$\\ \n" +
+                " \\______/  \\______/  \\______/  \\_______|\\_______/  \\____$$ |      \\__|\n" +
+                "                                                  $$\\   $$ |          \n" +
+                "                                                  \\$$$$$$  |          \n" +
+                "                                                   \\______/           \n");
+        Thread.sleep(500);
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
+    @Override
+    public void getTitleBar(String text, String sym, int len) {
 
         for (int i=0;i<len;i++) System.out.print(sym);
         System.out.print("\n");
@@ -84,8 +112,10 @@ public class Display implements Elements{
 
         int len1 = text1.length(),len2 = text2.length(),
                 len3 = text3.length(),len4 = text4.length(),len5 = text5.length();
+
+        int lf = len-(len1+len2+len3+len4+len5);
         System.out.print("\n");
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < lf; i++) {
             if (i == (0) ){
                 System.out.print(text1);
             } else if (i == (len-(85+len1))){
@@ -118,13 +148,13 @@ public class Display implements Elements{
     }
 
     @Override
-    public void getMenu() throws Exception {
+    public void getMenu() {
         getTitleBar("MENU","~",90);
         getSideLine("1. Lihat Data Indonesia");
         getSideLine("2. Lihat Data Seluruh Dunia");
         getSideLine("3. Lihat Data Berdasarkan Negara");
-        getSideLine("4. Tips Mencegah Penyebaran Covid 19");
-        getSideLine("5. Lihat Daftar Negara");
+        getSideLine("4. Lihat Data Provinsi Indonesia");
+        getSideLine("5. Keluar Dari Program");
         System.out.print("\nSilahkan pilih menu : ");
 
 

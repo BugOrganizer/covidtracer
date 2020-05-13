@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import coronavirus.internationaldata.*;
 import org.apache.commons.io.IOUtils;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
 public class Coronavirus extends Pandemic {
 
     private static final String BASE_URL = "https://api.covid19api.com/";
+    private static final String IND_URL = "https://api.kawalcorona.com/";
     private static final Gson gson = new Gson();
 
     /*
@@ -56,6 +58,10 @@ public class Coronavirus extends Pandemic {
         return country[country.length - 1];
     }
 
+    public Indonesia[] getProvinsi() throws Exception {
+        return gson.fromJson(getPage("https://api.kawalcorona.com/indonesia/provinsi"),Indonesia[].class);
+    }
+
     private static String getJson(String endpoint) throws Exception {
         String URL = BASE_URL + endpoint;
         return getPage(URL);
@@ -63,10 +69,13 @@ public class Coronavirus extends Pandemic {
 
     public static String  getPage(String url) throws Exception {
         URL urls = new URL(url);
-        URLConnection con = urls.openConnection();
+        HttpURLConnection con = (HttpURLConnection) urls.openConnection();
         InputStream in = con.getInputStream();
         String encoding = con.getContentEncoding();
         encoding = encoding == null ? "UTF-8" : encoding;
+
+
         return IOUtils.toString(in, encoding) ;
     }
+
 }
