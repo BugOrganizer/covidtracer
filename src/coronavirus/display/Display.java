@@ -172,7 +172,6 @@ public class Display implements Elements{
         }
     }
 
-
     @Override
     public void getLoading() throws Exception {
         System.out.print("\033[H\033[2J");

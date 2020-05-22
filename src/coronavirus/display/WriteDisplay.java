@@ -3,6 +3,8 @@ package coronavirus.display;
 import coronavirus.Coronavirus;
 import coronavirus.internationaldata.*;
 
+import java.util.ArrayList;
+
 public class WriteDisplay extends Display {
     private static final WriteDisplay display = new WriteDisplay();
     private static final Coronavirus coronavirus = new Coronavirus();
@@ -51,13 +53,13 @@ public class WriteDisplay extends Display {
     }
 
     public void getProvinsiTable() throws Exception {
-        Indonesia[] indonesia = coronavirus.getProvinsi();
+        ArrayList<Indonesia> indonesia = (ArrayList<Indonesia>) coronavirus.getProvinsi();
         System.out.print("\033[H\033[2J");
         System.out.flush();
         display.getTitleBar("DATA PROVINSI INDONESIA","-",90);
         display.getList("PROVINSI","KODE PROV","POSITIF","DEATHS","SEMBUH",120);
         System.out.print("\n");
-        for (Indonesia x :indonesia ) {
+        for (Indonesia x : indonesia ) {
             Provinsi p = x.getProvinsi();
             display.getList(p.getProvinsi(),p.getKodeProv(),p.getPositif(),p.getMeninggal(),p.getSembuh(),120);
             System.out.print("\n");

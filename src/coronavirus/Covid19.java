@@ -1,12 +1,15 @@
 package coronavirus;
 
+import coronavirus.display.Display;
 import coronavirus.display.WriteDisplay;
 
 import java.util.Scanner;
 
-public class Covid19 extends WriteDisplay {
+public class Covid19 extends Display {
     private static final Scanner input = new Scanner(System.in);
+    private static final WriteDisplay covid19 = new WriteDisplay();
     private static final Covid19 display = new Covid19();
+
 
     public static void main(String[] args) throws Exception {
 
@@ -24,13 +27,13 @@ public class Covid19 extends WriteDisplay {
                 switch (pick){
                     case '1' :
                         display.getLoading();
-                        display.getIndonesiaTable();
+                        covid19.getIndonesiaTable();
                         System.out.print("\n");
                         break;
 
                     case '2' :
                         display.getLoading();
-                        display.getWorldTable();
+                        covid19.getWorldTable();
                         System.out.print("\n");
                         break;
 
@@ -39,13 +42,13 @@ public class Covid19 extends WriteDisplay {
                         System.out.print("Masukan nama negara : ");
                         String country = input.nextLine().toLowerCase();
                         display.getLoading();
-                        display.getWorldTable(country);
+                        covid19.getWorldTable(country);
                         System.out.print("\n");
                         break;
 
                     case '4' :
                         display.getLoading();
-                        display.getProvinsiTable();
+                        covid19.getProvinsiTable();
                         System.out.print("\n");
                         break;
 
@@ -58,6 +61,7 @@ public class Covid19 extends WriteDisplay {
                         display.getWarning();
                         System.out.println("Maaf pilihan anda ngawur !");
                 }
+
             } catch (Exception MasalahInternet){
                 display.getWarning();
                 System.out.println("Internet anda mati atau server sedang sibuk !");
@@ -82,8 +86,11 @@ public class Covid19 extends WriteDisplay {
                     System.out.println("Masukan Y atau T");
                     yay = true;
                 }
+
             }
 
         }
+
     }
+
 }

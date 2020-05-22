@@ -1,17 +1,19 @@
 package coronavirus;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import coronavirus.internationaldata.*;
 import org.apache.commons.io.IOUtils;
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
+import java.util.ArrayList;
 
 public class Coronavirus extends Pandemic {
 
     private static final String BASE_URL = "https://api.covid19api.com/";
-    private static final String IND_URL = "https://api.kawalcorona.com/";
+    private static final String IDPROV_URL = "https://api.kawalcorona.com/indonesia/provinsi";
     private static final Gson gson = new Gson();
 
     /*
@@ -58,8 +60,9 @@ public class Coronavirus extends Pandemic {
         return country[country.length - 1];
     }
 
-    public Indonesia[] getProvinsi() throws Exception {
-        return gson.fromJson(getPage("https://api.kawalcorona.com/indonesia/provinsi"),Indonesia[].class);
+    public ArrayList<?> getProvinsi() throws Exception {
+        Type IndonesiaList = new TypeToken<ArrayList<Indonesia>>() {}.getType();
+        return gson.fromJson(getPage(IDPROV_URL),IndonesiaList);
     }
 
     private static String getJson(String endpoint) throws Exception {
