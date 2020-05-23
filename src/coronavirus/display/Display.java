@@ -15,7 +15,7 @@ public class Display implements Elements{
 
         String text = "Aplikasi sederhana untuk memantau perkembangan kasus Pandemic covid-19\n" +
                 "yang disebabkan oleh virus Severe Acute Respiratory Syndrome-related Coronavirus 2\n" +
-                "silahkan cumut di github.com/annurdien/covidtracer\n";
+                "\n";
         System.out.print(text);
     }
 
@@ -33,8 +33,7 @@ public class Display implements Elements{
 
     @Override
     public void getGoodby() throws Exception{
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         System.out.println("\n" +
                 " $$$$$$\\                            $$\\ $$\\                       $$\\ \n" +
                 "$$  __$$\\                           $$ |$$ |                      $$ |\n" +
@@ -48,8 +47,7 @@ public class Display implements Elements{
                 "                                                  \\$$$$$$  |          \n" +
                 "                                                   \\______/           \n");
         Thread.sleep(500);
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
     }
 
     @Override
@@ -174,10 +172,21 @@ public class Display implements Elements{
 
     @Override
     public void getLoading() throws Exception {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         System.out.print("Loading");
         getDotRecursive(10);
         System.out.print("\n");
+    }
+
+    @Override
+    public void clearConsole() throws Exception {
+        String OS = System.getProperty("os.name");
+
+        if (OS.contains("Windows")){
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        } else if (OS.contains("Linux")){
+            System.out.print("\033[H\033[2J");
+        }
+
     }
 }

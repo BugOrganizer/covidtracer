@@ -12,6 +12,7 @@ public interface Elements {
     public void getLoading() throws Exception;
     public int getDotRecursive(int n) throws Exception;
     public void getGoodby() throws Exception ;
+    public void clearConsole() throws Exception;
 
 
 }

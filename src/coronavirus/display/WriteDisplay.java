@@ -11,8 +11,7 @@ public class WriteDisplay extends Display {
 
     public void getWorldTable() throws Exception {
         Countries[] countries = coronavirus.getCountryAll();
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         display.getTitleBar("DATA SELURUH DUNIA","-",90);
         display.getList("NEGARA","POSITIF","DEATH","SEMBUH","UPDATE",120);
         System.out.print("\n");
@@ -29,8 +28,7 @@ public class WriteDisplay extends Display {
 
     public void getWorldTable(String flag) throws Exception {
         Country c = coronavirus.getByCountry(flag);
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         display.getTitleBar("DATA NEGARA "+flag.toUpperCase(),"-",90);
         display.getList("NEGARA","POSITIF","DEATH","SEMBUH","UPDATE",120);
         display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
@@ -38,24 +36,22 @@ public class WriteDisplay extends Display {
 
     public void getIndonesiaTable() throws Exception {
         Country c = coronavirus.getIndonesiaLatest();
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         display.getTitleBar("DATA NEGARA INDONESIA","-",90);
         display.getList("NEGARA","POSITIF","DEATH","SEMBUH","UPDATE",120);
+        System.out.print("\n");
         display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
     }
 
     public void getWorldLiveBox() throws Exception {
         Global global = coronavirus.getGlobalLatest();
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         display.getDisplayBox("POSITIVE","MENINGGAL",global.getTotalConfirmed(),global.getTotalDeaths(),100);
     }
 
     public void getProvinsiTable() throws Exception {
         ArrayList<Indonesia> indonesia = (ArrayList<Indonesia>) coronavirus.getProvinsi();
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        clearConsole();
         display.getTitleBar("DATA PROVINSI INDONESIA","-",90);
         display.getList("PROVINSI","KODE PROV","POSITIF","DEATHS","SEMBUH",120);
         System.out.print("\n");

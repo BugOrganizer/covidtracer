@@ -13,8 +13,7 @@ public class Covid19 extends Display {
 
     public static void main(String[] args) throws Exception {
 
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        display.clearConsole();
 
         boolean Continue = true;
         while (Continue) {
@@ -73,8 +72,7 @@ public class Covid19 extends Display {
                 System.out.print("\nKembali memilih di menu utama ? [Y/N] ");
                 char YES = input.next().toLowerCase().charAt(0);
                 if (YES=='y'){
-                    System.out.print("\033[H\033[2J");
-                    System.out.flush();
+                    display.clearConsole();
                     Continue = true;
                     yay = false;
                 }else if (YES=='n'){
