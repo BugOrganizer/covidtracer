@@ -24,7 +24,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Covid19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Covid19.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Display.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Elements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Elements.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/WriteDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/WriteDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/Coronavirus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Coronavirus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/Covid19.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Covid19.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/display/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/Elements.java" afterDir="false" />
@@ -159,22 +159,22 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1588982759152" />
-    <state width="1324" height="563" key="GridCell.Tab.0.bottom" timestamp="1590217470270">
+    <state width="1324" height="563" key="GridCell.Tab.0.bottom" timestamp="1590396008116">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1590217470270" />
-    <state width="1324" height="563" key="GridCell.Tab.0.center" timestamp="1590217470269">
+    <state width="1324" height="563" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1590396008116" />
+    <state width="1324" height="563" key="GridCell.Tab.0.center" timestamp="1590396008115">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1590217470269" />
-    <state width="1324" height="563" key="GridCell.Tab.0.left" timestamp="1590217470268">
+    <state width="1324" height="563" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1590396008115" />
+    <state width="1324" height="563" key="GridCell.Tab.0.left" timestamp="1590396008114">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1590217470268" />
-    <state width="1324" height="563" key="GridCell.Tab.0.right" timestamp="1590217470269">
+    <state width="1324" height="563" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1590396008114" />
+    <state width="1324" height="563" key="GridCell.Tab.0.right" timestamp="1590396008115">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1590217470269" />
+    <state width="1324" height="563" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1590396008115" />
     <state width="1324" height="437" key="GridCell.Tab.1.bottom" timestamp="1589049983321">
       <screen x="0" y="0" width="1366" height="744" />
     </state>

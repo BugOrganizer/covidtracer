@@ -17,52 +17,60 @@ public class Covid19 extends Display {
 
         boolean Continue = true;
         while (Continue) {
-            display.getMainPage();
-            display.getMenu();
+            display.MainPage();
+            display.Menu();
 
             char pick = input.next().charAt(0);
 
             try {
                 switch (pick){
                     case '1' :
-                        display.getLoading();
+                        display.Loading();
                         covid19.getIndonesiaTable();
                         System.out.print("\n");
                         break;
 
                     case '2' :
-                        display.getLoading();
+                        display.Loading();
                         covid19.getWorldTable();
                         System.out.print("\n");
                         break;
 
                     case '3' :
                         input.nextLine();
+                        System.out.println("\nGunakan nama negara dalam bahasa inggris, apabila nama negara terdapat" +
+                                "\ndua kalimat , gunakan tanda [ - ] untuk memisahkan misal, south-africa\n");
                         System.out.print("Masukan nama negara : ");
                         String country = input.nextLine().toLowerCase();
-                        display.getLoading();
+                        display.Loading();
                         covid19.getWorldTable(country);
                         System.out.print("\n");
                         break;
 
                     case '4' :
-                        display.getLoading();
+                        display.Loading();
                         covid19.getProvinsiTable();
                         System.out.print("\n");
                         break;
 
                     case '5' :
-                        display.getGoodby();
+                        display.Loading();
+                        covid19.getWorldLiveBox();
+                        System.out.print("\n");
+                        break;
+
+                    case '6' :
+                        display.Goodby();
                         System.exit(0);
                         break;
 
                     default :
-                        display.getWarning();
-                        System.out.println("Maaf pilihan anda ngawur !");
+                        display.Warning();
+                        System.out.println("Maaf pilihan anda salah !");
                 }
 
             } catch (Exception MasalahInternet){
-                display.getWarning();
+                display.Warning();
                 System.out.println("Internet anda mati atau server sedang sibuk !");
             }
 
@@ -76,11 +84,11 @@ public class Covid19 extends Display {
                     Continue = true;
                     yay = false;
                 }else if (YES=='n'){
-                    display.getGoodby();
+                    display.Goodby();
                     Continue = false;
                     yay = false;
                 } else {
-                    display.getWarning();
+                    display.Warning();
                     System.out.println("Masukan Y atau T");
                     yay = true;
                 }

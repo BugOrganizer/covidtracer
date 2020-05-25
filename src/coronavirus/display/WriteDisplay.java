@@ -31,6 +31,7 @@ public class WriteDisplay extends Display {
         clearConsole();
         display.getTitleBar("DATA NEGARA "+flag.toUpperCase(),"-",90);
         display.getList("NEGARA","POSITIF","DEATH","SEMBUH","UPDATE",120);
+        System.out.print("\n");
         display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
     }
 
@@ -46,7 +47,10 @@ public class WriteDisplay extends Display {
     public void getWorldLiveBox() throws Exception {
         Global global = coronavirus.getGlobalLatest();
         clearConsole();
-        display.getDisplayBox("POSITIVE","MENINGGAL",global.getTotalConfirmed(),global.getTotalDeaths(),100);
+        display.getTitleBar("DATA TOTAL SELURUH DUNIA","-",90);
+        display.getList(" TOTAL CONFIRMED ","TOTAL RECOVERED"," "," TOTAL DEATHS","",120);
+        System.out.print("\n");
+        display.getList(" "+global.getTotalConfirmed(),global.getTotalRecovered()," ",global.getTotalDeaths()," ",120);
     }
 
     public void getProvinsiTable() throws Exception {
@@ -55,8 +59,8 @@ public class WriteDisplay extends Display {
         display.getTitleBar("DATA PROVINSI INDONESIA","-",90);
         display.getList("PROVINSI","KODE PROV","POSITIF","DEATHS","SEMBUH",120);
         System.out.print("\n");
-        for (Indonesia x : indonesia ) {
-            Provinsi p = x.getProvinsi();
+        for (Indonesia i : indonesia ) {
+            Provinsi p = i.getProvinsi();
             display.getList(p.getProvinsi(),p.getKodeProv(),p.getPositif(),p.getMeninggal(),p.getSembuh(),120);
             System.out.print("\n");
         }

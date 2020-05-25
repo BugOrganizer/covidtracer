@@ -76,8 +76,6 @@ public class Coronavirus extends Pandemic {
         InputStream in = con.getInputStream();
         String encoding = con.getContentEncoding();
         encoding = encoding == null ? "UTF-8" : encoding;
-
-
         return IOUtils.toString(in, encoding) ;
     }
 

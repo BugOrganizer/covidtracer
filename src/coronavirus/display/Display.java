@@ -3,7 +3,7 @@ package coronavirus.display;
 public class Display implements Elements{
 
     @Override
-    public void getMainPage() {
+    public void MainPage() {
         System.out.print("\n" +
                 " ██████  ██████  ██    ██ ██ ██████      ████████ ██████   █████   ██████ ███████ \n" +
                 "██      ██    ██ ██    ██ ██ ██   ██        ██    ██   ██ ██   ██ ██      ██      \n" +
@@ -20,7 +20,7 @@ public class Display implements Elements{
     }
 
     @Override
-    public void getWarning(){
+    public void Warning(){
         System.out.print("\n");
         System.out.println("\n" +
                 "  _____                       _ \n" +
@@ -32,7 +32,7 @@ public class Display implements Elements{
     }
 
     @Override
-    public void getGoodby() throws Exception{
+    public void Goodby() throws Exception{
         clearConsole();
         System.out.println("\n" +
                 " $$$$$$\\                            $$\\ $$\\                       $$\\ \n" +
@@ -146,13 +146,19 @@ public class Display implements Elements{
     }
 
     @Override
-    public void getMenu() {
+    public void Menu() {
         getTitleBar("MENU","~",90);
-        getSideLine("1. Lihat Data Indonesia");
-        getSideLine("2. Lihat Data Seluruh Dunia");
-        getSideLine("3. Lihat Data Berdasarkan Negara");
-        getSideLine("4. Lihat Data Provinsi Indonesia");
-        getSideLine("5. Keluar Dari Program");
+        getSideLine("1. Data Indonesia");
+        System.out.println();
+        getSideLine("2. Data Semua Negara");
+        System.out.println();
+        getSideLine("3. Data Berdasarkan Negara");
+        System.out.println();
+        getSideLine("4. Data Provinsi Indonesia");
+        System.out.println();
+        getSideLine("5. Total Kasus Seluruh Dunia");
+        System.out.println();
+        getSideLine("6. Keluar Dari Program");
         System.out.print("\nSilahkan pilih menu : ");
 
 
@@ -171,7 +177,7 @@ public class Display implements Elements{
     }
 
     @Override
-    public void getLoading() throws Exception {
+    public void Loading() throws Exception {
         clearConsole();
         System.out.print("Loading");
         getDotRecursive(10);
