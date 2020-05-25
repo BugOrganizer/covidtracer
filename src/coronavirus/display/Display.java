@@ -2,6 +2,9 @@ package coronavirus.display;
 
 public class Display implements Elements{
 
+    /*
+    * Menampilkan MainPage
+    * */
     @Override
     public void MainPage() {
         System.out.print("\n" +
@@ -18,6 +21,9 @@ public class Display implements Elements{
         System.out.print(text);
     }
 
+    /*
+    * Menampilkan Tampilan Peringatkan Error
+    * */
     @Override
     public void Warning(){
         System.out.print("\n");
@@ -30,8 +36,11 @@ public class Display implements Elements{
                 "                                \n");
     }
 
+    /*
+    * Menampilkan pesan GoodBye
+    * */
     @Override
-    public void Goodby() throws Exception{
+    public void Goodbye() throws Exception{
         clearConsole();
         System.out.println("\n" +
                 "   ______                   __ ____                  __\n" +
@@ -44,6 +53,13 @@ public class Display implements Elements{
         clearConsole();
     }
 
+    /*
+    * Menampilkan bar untuk title
+    * getTitleBar("judul","~",9)
+    * ~~~~~~~~~
+    *   judul
+    * ~~~~~~~~~
+    * */
     @Override
     public void getTitleBar(String text, String sym, int len) {
 
@@ -61,43 +77,14 @@ public class Display implements Elements{
         System.out.print("\n");
     }
 
-    @Override
-    public void getDisplayBox(String text1, String text2, String text3,
-                              String text4, int len) {
 
-        int tlen1 = len-(text1+text2).length();
-        int tlen2 = len-(text3+text4).length();
-
-        for (int i=0;i<len;i++) System.out.print("-");
-        System.out.print("\n");
-        for (int i = 0; i < tlen1; i++) {
-            if (i == ((tlen1/4))) {
-                System.out.print(text1);
-            } else if (i == ((tlen1-(tlen1/4)))){
-                System.out.print(text2);
-            } else{
-                System.out.print(" ");
-            }
-        }
-
-        System.out.print("\n");
-        for (int i=0;i<len;i++) System.out.print("-");
-        System.out.print("\n");
-        for (int i = 0; i < tlen2; i++) {
-            if (i == ((tlen2/4))) {
-                System.out.print(text3);
-            } else if (i == ((tlen2-(tlen2/4))-2)){
-                System.out.print(text4);
-            }else{
-                System.out.print(" ");
-            }
-        }
-
-        System.out.print("\n");
-
-        for (int i=0;i<len;i++) System.out.print("-");
-    }
-
+    /*
+    * Menampilkan table tanpa border
+    * getList("t1","t2","t3","t4""t5",10)
+    *
+    *  t1  t2  t3  t4   t5
+    *
+    * */
     @Override
     public void getList(String text1, String text2,
                          String text3, String text4, String text5,int len) {
@@ -125,7 +112,13 @@ public class Display implements Elements{
 
     }
 
-
+    /*
+    * Menampilkan text dengan awal dan akhir #
+    *
+    * getSideLine("Menu 1")
+    * # Menu 1                                  #
+    *
+    * */
     public void getSideLine(String text){
         for (int i=0;i<90;i++) {
             if (i == 0 || i == (89-text.length())){
@@ -139,6 +132,10 @@ public class Display implements Elements{
         System.out.print("\n");
     }
 
+    /*
+    * Menampilkan menu utama
+    *
+    * */
     @Override
     public void Menu() {
         getTitleBar("MENU","~",90);
@@ -158,6 +155,10 @@ public class Display implements Elements{
 
     }
 
+    /*
+    * Menampilkan titik tanda loading
+    * . . . .  setiap titik wait 300 ms
+    * */
     @Override
     public int getDotRecursive(int n) throws Exception{
         if (n==0) {
@@ -170,6 +171,10 @@ public class Display implements Elements{
         }
     }
 
+    /*
+    * Menampilkan pesan Loading
+    * Loading . . . .
+    * */
     @Override
     public void Loading() throws Exception {
         clearConsole();
@@ -178,15 +183,17 @@ public class Display implements Elements{
         System.out.print("\n");
     }
 
+    /*
+    * Clear Console, Windows atau Linux.
+    * */
     @Override
     public void clearConsole() throws Exception {
         String OS = System.getProperty("os.name");
-
         if (OS.contains("Windows")){
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         } else if (OS.contains("Linux")){
             System.out.print("\033[H\033[2J");
         }
-
     }
+
 }

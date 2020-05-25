@@ -60,16 +60,25 @@ public class Coronavirus extends Pandemic {
         return country[country.length - 1];
     }
 
+    /*
+    * getProvinsi() mengembalikan list bertipe Indonesia yang berisi data provinsi di Indoneisa.
+    * */
     public ArrayList<?> getProvinsi() throws Exception {
         Type IndonesiaList = new TypeToken<ArrayList<Indonesia>>() {}.getType();
         return gson.fromJson(getPage(IDPROV_URL),IndonesiaList);
     }
 
+    /*
+    * getJson() mengembalikan String yang berisi text JSON
+    * */
     private static String getJson(String endpoint) throws Exception {
         String URL = BASE_URL + endpoint;
         return getPage(URL);
     }
 
+    /*
+    * getPage() membuat koneksi ke url dan mengembalikan text JSON
+    * */
     public static String  getPage(String url) throws Exception {
         URL urls = new URL(url);
         HttpURLConnection con = (HttpURLConnection) urls.openConnection();

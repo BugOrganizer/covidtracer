@@ -9,6 +9,10 @@ public class WriteDisplay extends Display {
     private static final WriteDisplay display = new WriteDisplay();
     private static final Coronavirus coronavirus = new Coronavirus();
 
+    /*
+    * getWorldTable Menampilkan data di seluruh dunia, mencetak berdasarkan banyak
+    * karakter yang akan ditampilkan
+    * */
     public void getWorldTable() throws Exception {
         Countries[] countries = coronavirus.getCountryAll();
         clearConsole();
@@ -26,6 +30,9 @@ public class WriteDisplay extends Display {
         }
     }
 
+    /*
+    * getWorldTable() Mencetak data berdasarkan negara yang di inginkan
+    * */
     public void getWorldTable(String flag) throws Exception {
         Country c = coronavirus.getByCountry(flag);
         clearConsole();
@@ -35,6 +42,9 @@ public class WriteDisplay extends Display {
         display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
     }
 
+    /*
+    * getIndonesiaTable() Mencetak data terkini negara Indonesia
+    * */
     public void getIndonesiaTable() throws Exception {
         Country c = coronavirus.getIndonesiaLatest();
         clearConsole();
@@ -44,6 +54,9 @@ public class WriteDisplay extends Display {
         display.getList(c.getCountry(),c.getConfirmed(),c.getDeaths(),c.getRecovered(),c.getDate(),120);
     }
 
+    /*
+    * getWorldLiveBox() Mencetak data total kasus di seluruh dunia
+    * */
     public void getWorldLiveBox() throws Exception {
         Global global = coronavirus.getGlobalLatest();
         clearConsole();
@@ -53,6 +66,9 @@ public class WriteDisplay extends Display {
         display.getList(" "+global.getTotalConfirmed(),global.getTotalRecovered()," ",global.getTotalDeaths()," ",120);
     }
 
+    /*
+    * getProvinsiTable() Mencetak data kasus provinsi di Indonesia
+    * */
     public void getProvinsiTable() throws Exception {
         ArrayList<Indonesia> indonesia = (ArrayList<Indonesia>) coronavirus.getProvinsi();
         clearConsole();

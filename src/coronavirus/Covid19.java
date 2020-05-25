@@ -60,7 +60,7 @@ public class Covid19 extends Display {
                         break;
 
                     case '6' :
-                        display.Goodby();
+                        display.Goodbye();
                         System.exit(0);
                         break;
 
@@ -77,14 +77,14 @@ public class Covid19 extends Display {
             boolean yay = true;
             while (yay){
 
-                System.out.print("\nKembali memilih di menu utama ? [Y/N] ");
+                System.out.print("\nKembali memilih di menu utama ? [Y/N] : ");
                 char YES = input.next().toLowerCase().charAt(0);
                 if (YES=='y'){
                     display.clearConsole();
                     Continue = true;
                     yay = false;
                 }else if (YES=='n'){
-                    display.Goodby();
+                    display.Goodbye();
                     Continue = false;
                     yay = false;
                 } else {

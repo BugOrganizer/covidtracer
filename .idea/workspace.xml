@@ -21,6 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bfe9d110-e159-47d9-8890-77f1595ba11e" name="Default Changelist" comment="Commit 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/Coronavirus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Coronavirus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/Covid19.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Covid19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/Pandemic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Pandemic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/display/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/Elements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/display/WriteDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/WriteDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +217,11 @@
           <url>file://$PROJECT_DIR$/src/coronavirus/Coronavirus.java</url>
           <line>51</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/coronavirus/display/Display.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
