@@ -16,7 +16,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="com.konghq:unirest-java:3.7.02" level="project" />
     <orderEntry type="library" exported="" name="commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="commons-io-2.5" level="project" />
   </component>
 </module>

@@ -120,7 +120,7 @@ public class Display implements Elements{
     *
     * */
     public void getSideLine(String text){
-        for (int i=0;i<90;i++) {
+        for (int i=0;i<90-(text.length());i++) {
             if (i == 0 || i == (89-text.length())){
                 System.out.print("#");
             } else if (i == 3){
