@@ -26,13 +26,13 @@ public class Covid19 extends Display {
                 switch (pick){
                     case '1' :
                         display.Loading();
-                        covid19.getIndonesiaTable();
+                        covid19.IndonesiaTable();
                         System.out.print("\n");
                         break;
 
                     case '2' :
                         display.Loading();
-                        covid19.getWorldTable();
+                        covid19.WorldTable();
                         System.out.print("\n");
                         break;
 
@@ -43,19 +43,19 @@ public class Covid19 extends Display {
                         System.out.print("Masukan nama negara : ");
                         String country = input.nextLine().toLowerCase();
                         display.Loading();
-                        covid19.getWorldTable(country);
+                        covid19.WorldTable(country);
                         System.out.print("\n");
                         break;
 
                     case '4' :
                         display.Loading();
-                        covid19.getProvinsiTable();
+                        covid19.ProvinsiTable();
                         System.out.print("\n");
                         break;
 
                     case '5' :
                         display.Loading();
-                        covid19.getWorldLiveBox();
+                        covid19.WorldLiveBox();
                         System.out.print("\n");
                         break;
 
@@ -89,7 +89,7 @@ public class Covid19 extends Display {
                     yay = false;
                 } else {
                     display.Warning();
-                    System.out.println("Masukan Y atau T");
+                    System.out.println("Masukan Y atau N");
                     yay = true;
                 }
 

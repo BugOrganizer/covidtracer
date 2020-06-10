@@ -61,7 +61,7 @@ public class Display implements Elements{
     * ~~~~~~~~~
     * */
     @Override
-    public void getTitleBar(String text, String sym, int len) {
+    public void TitleBar(String text, String sym, int len) {
 
         for (int i=0;i<len;i++) System.out.print(sym);
         System.out.print("\n");
@@ -86,8 +86,8 @@ public class Display implements Elements{
     *
     * */
     @Override
-    public void getList(String text1, String text2,
-                         String text3, String text4, String text5,int len) {
+    public void ListBox(String text1, String text2,
+                        String text3, String text4, String text5, int len) {
 
         int len1 = text1.length(),len2 = text2.length(),
                 len3 = text3.length(),len4 = text4.length(),len5 = text5.length();
@@ -119,7 +119,7 @@ public class Display implements Elements{
     * # Menu 1                                  #
     *
     * */
-    public void getSideLine(String text){
+    public void SideLine(String text){
         for (int i=0;i<90-(text.length());i++) {
             if (i == 0 || i == (89-text.length())){
                 System.out.print("#");
@@ -138,18 +138,18 @@ public class Display implements Elements{
     * */
     @Override
     public void Menu() {
-        getTitleBar("MENU","~",90);
-        getSideLine("1. Data Indonesia");
+        TitleBar("MENU","~",90);
+        SideLine("1. Data Indonesia");
         System.out.println();
-        getSideLine("2. Data Semua Negara");
+        SideLine("2. Data Semua Negara");
         System.out.println();
-        getSideLine("3. Data Berdasarkan Negara");
+        SideLine("3. Data Berdasarkan Negara");
         System.out.println();
-        getSideLine("4. Data Provinsi Indonesia");
+        SideLine("4. Data Provinsi Indonesia");
         System.out.println();
-        getSideLine("5. Total Kasus Seluruh Dunia");
+        SideLine("5. Total Kasus Seluruh Dunia");
         System.out.println();
-        getSideLine("6. Keluar Dari Program");
+        SideLine("6. Keluar Dari Program");
         System.out.print("\nSilahkan pilih menu : ");
 
 
@@ -160,14 +160,14 @@ public class Display implements Elements{
     * . . . .  setiap titik wait 300 ms
     * */
     @Override
-    public int getDotRecursive(int n) throws Exception{
+    public int DotRecursive(int n) throws Exception{
         if (n==0) {
             return 1;
 
         }else{
             System.out.print(".");
             Thread.sleep(300);
-            return getDotRecursive(n-1);
+            return DotRecursive(n-1);
         }
     }
 
@@ -179,7 +179,7 @@ public class Display implements Elements{
     public void Loading() throws Exception {
         clearConsole();
         System.out.print("Loading");
-        getDotRecursive(10);
+        DotRecursive(10);
         System.out.print("\n");
     }
 
