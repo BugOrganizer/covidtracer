@@ -11,5 +11,6 @@ abstract class Pandemic {
     abstract Country getByCountry(String flag) throws Exception;
     abstract Country getIndonesiaLatest() throws Exception;
     abstract ArrayList<?> getProvinsi() throws Exception;
+    abstract int getMaxDeath() throws Exception;
 
 }

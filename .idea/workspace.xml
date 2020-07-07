@@ -19,15 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfe9d110-e159-47d9-8890-77f1595ba11e" name="Default Changelist" comment="Commit 2">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_io_commons_io_2_5.xml" beforeDir="false" />
+    <list default="true" id="bfe9d110-e159-47d9-8890-77f1595ba11e" name="Default Changelist" comment="Tambah Gagah Dengan Prima">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coronatracer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coronatracer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Coronavirus$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Coronavirus$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Coronavirus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Coronavirus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Covid19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Covid19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Pandemic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/Pandemic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Elements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/Elements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/WriteDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/display/WriteDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/internationaldata/Provinsi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coronatracer/coronavirus/internationaldata/Provinsi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/Coronavirus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Coronavirus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/Covid19.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Covid19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/Pandemic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/Pandemic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/display/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/Elements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coronavirus/display/WriteDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/display/WriteDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coronavirus/internationaldata/Provinsi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coronavirus/internationaldata/Provinsi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +81,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="coronavirus" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Covid19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -129,7 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 2" />
+    <MESSAGE value="Tambah Gagah Dengan Prima" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tambah Gagah Dengan Prima" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="0" width="1366" height="744" key="#Project_Structure" timestamp="1590597318607">
@@ -160,26 +174,26 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="416" y="122" width="528" height="505" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.744@0.0.1366.744" timestamp="1590216212951" />
-    <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl" timestamp="1590595876847">
+    <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl" timestamp="1593663593344">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1590595876847" />
-    <state width="1324" height="563" key="GridCell.Tab.0.bottom" timestamp="1590596823231">
+    <state x="319" y="116" width="716" height="512" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1593663593344" />
+    <state width="1324" height="563" key="GridCell.Tab.0.bottom" timestamp="1593685619423">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1590596823231" />
-    <state width="1324" height="563" key="GridCell.Tab.0.center" timestamp="1590596823230">
+    <state width="1324" height="563" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1593685619423" />
+    <state width="1324" height="563" key="GridCell.Tab.0.center" timestamp="1593685619422">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1590596823230" />
-    <state width="1324" height="563" key="GridCell.Tab.0.left" timestamp="1590596823229">
+    <state width="1324" height="563" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1593685619422" />
+    <state width="1324" height="563" key="GridCell.Tab.0.left" timestamp="1593685619421">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1590596823229" />
-    <state width="1324" height="563" key="GridCell.Tab.0.right" timestamp="1590596823230">
+    <state width="1324" height="563" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1593685619421" />
+    <state width="1324" height="563" key="GridCell.Tab.0.right" timestamp="1593685619422">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1324" height="563" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1590596823230" />
+    <state width="1324" height="563" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1593685619422" />
     <state width="1324" height="437" key="GridCell.Tab.1.bottom" timestamp="1589049983321">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -212,10 +226,18 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="297" y="0" width="766" height="744" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.744@0.0.1366.744" timestamp="1589380495330" />
-    <state x="10" y="0" width="1339" height="744" key="new project wizard" timestamp="1591426682874">
+    <state x="463" y="289" width="440" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594117810657">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="10" y="0" width="1339" height="744" key="new project wizard/0.0.1366.744@0.0.1366.744" timestamp="1591426682874" />
+    <state x="463" y="289" width="440" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1594117810657" />
+    <state x="10" y="0" width="1339" height="744" key="new project wizard" timestamp="1592471038969">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="10" y="0" width="1339" height="744" key="new project wizard/0.0.1366.744@0.0.1366.744" timestamp="1592471038969" />
+    <state x="345" y="162" key="run.anything.popup" timestamp="1594117062372">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="345" y="162" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1594117062372" />
     <state x="346" y="65" key="search.everywhere.popup" timestamp="1589381685734">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -224,25 +246,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/coronavirus/Coronavirus.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/coronavirus/display/Display.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/coronavirus/display/Display.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/coronavirus/display/Display.java</url>
-          <line>121</line>
-          <properties class="coronavirus.display.Display" method="getSideLine">
+          <line>132</line>
+          <properties class="coronavirus.display.Display" method="sideLine">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="8" />

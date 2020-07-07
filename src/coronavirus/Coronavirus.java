@@ -9,12 +9,35 @@ import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import coronavirus.display.Display;
 
-public class Coronavirus extends Pandemic {
+public class Coronavirus {
 
     private static final String BASE_URL = "https://api.covid19api.com/";
     private static final String IDPROV_URL = "https://api.kawalcorona.com/indonesia/provinsi";
     private static final Gson gson = new Gson();
+    private static final Display display = new Display();
+
+    public Summary summary;
+    public Global globalLatest;
+    public Countries[] countryAll;
+    public Country indonesiaLatest;
+    public ArrayList<Indonesia> provinsi;
+    public int maxDeath,minDeath,maxRecovered,minRecovered;
+
+    Coronavirus() throws Exception {
+        this.summary = getSummary();
+        this.globalLatest = getGlobalLatest();
+        this.countryAll = getCountryAll();
+        this.indonesiaLatest = getIndonesiaLatest();
+        this.provinsi = getProvinsi();
+        this.maxDeath = getMaxDeath(this.provinsi);
+        this.minDeath = getMinDeath(this.provinsi);
+        this.maxRecovered = getMaxRecovered(this.provinsi);
+        this.minRecovered = getMinRecovered(this.provinsi);
+
+    }
 
     /*
      * @getSummary mengembalikan data berupa object Summary yang berisi
@@ -42,14 +65,6 @@ public class Coronavirus extends Pandemic {
         return getSummary().getCountries();
     }
 
-    /*
-     * getByCountry(flag) mengembalikan data berupa object country yang memuat informasi terkini
-     * terkait kasus covid 19 disuatu negara.
-     * */
-    public Country getByCountry(String flag) throws Exception {
-        Country[] country = gson.fromJson(getJson("country/" + flag), Country[].class);
-        return country[country.length - 1];
-    }
 
     /*
      * getIndonesiaLatest() mengembalikan data berupa object country yang memuat data terkini covid 19
@@ -63,10 +78,47 @@ public class Coronavirus extends Pandemic {
     /*
     * getProvinsi() mengembalikan list bertipe Indonesia yang berisi data provinsi di Indoneisa.
     * */
-    public ArrayList<?> getProvinsi() throws Exception {
+    public ArrayList<Indonesia> getProvinsi() throws Exception {
         Type IndonesiaList = new TypeToken<ArrayList<Indonesia>>() {}.getType();
         return gson.fromJson(getPage(IDPROV_URL),IndonesiaList);
     }
+
+    public int getMaxDeath(ArrayList<Indonesia> indonesia)  {
+        ArrayList<Integer> Meninggal = new ArrayList<>();
+        for (Indonesia i : indonesia ) {
+            Provinsi p = i.getProvinsi();
+            Meninggal.add(p.getMeninggal());
+        }
+        return Collections.max(Meninggal);
+    }
+
+    public int getMinDeath(ArrayList<Indonesia> indonesia){
+        ArrayList<Integer> Meninggal = new ArrayList<>();
+        for (Indonesia i : indonesia ) {
+            Provinsi p = i.getProvinsi();
+            Meninggal.add(p.getMeninggal());
+        }
+        return Collections.min(Meninggal);
+    }
+
+    public int getMaxRecovered(ArrayList<Indonesia> indonesia){
+        ArrayList<Integer> Sembuh = new ArrayList<>();
+        for (Indonesia i : indonesia ) {
+            Provinsi p = i.getProvinsi();
+            Sembuh.add(p.getSembuh());
+        }
+        return Collections.max(Sembuh);
+    }
+
+    public int getMinRecovered(ArrayList<Indonesia> indonesia){
+        ArrayList<Integer> Sembuh = new ArrayList<>();
+        for (Indonesia i : indonesia ) {
+            Provinsi p = i.getProvinsi();
+            Sembuh.add(p.getSembuh());
+        }
+        return Collections.min(Sembuh);
+    }
+
 
     /*
     * getJson() mengembalikan String yang berisi text JSON

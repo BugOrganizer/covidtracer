@@ -6,7 +6,7 @@ public class Display implements Elements{
     * Menampilkan MainPage
     * */
     @Override
-    public void MainPage() {
+    public void mainPage() {
         System.out.print("\n" +
                 "   ______              _      __ ______                    __              \n" +
                 "  / ____/____  _   __ (_)____/ //_  __/_____ ____ _ _____ / /__ ___   _____\n" +
@@ -20,12 +20,23 @@ public class Display implements Elements{
                 "\n";
         System.out.print(text);
     }
+    @Override
+    public void fetchData() {
+        System.out.println("" +
+                "    ______     __       __    _                ____        __              \n" +
+                "   / ____/__  / /______/ /_  (_)___  ____ _   / __ \\____ _/ /_____ _       \n" +
+                "  / /_  / _ \\/ __/ ___/ __ \\/ / __ \\/ __ `/  / / / / __ `/ __/ __ `/       \n" +
+                " / __/ /  __/ /_/ /__/ / / / / / / / /_/ /  / /_/ / /_/ / /_/ /_/ /  _ _ _ \n" +
+                "/_/    \\___/\\__/\\___/_/ /_/_/_/ /_/\\__, /  /_____/\\__,_/\\__/\\__,_/  (_|_|_)\n" +
+                "                                  /____/                                   \n" +
+                "\n");
+    }
 
     /*
     * Menampilkan Tampilan Peringatkan Error
     * */
     @Override
-    public void Warning(){
+    public void warning(){
         System.out.print("\n");
         System.out.println("\n" +
                 "  _____                       _ \n" +
@@ -40,7 +51,7 @@ public class Display implements Elements{
     * Menampilkan pesan GoodBye
     * */
     @Override
-    public void Goodbye() throws Exception{
+    public void goodbye() throws Exception{
         clearConsole();
         System.out.println("\n" +
                 "   ______                   __ ____                  __\n" +
@@ -61,7 +72,7 @@ public class Display implements Elements{
     * ~~~~~~~~~
     * */
     @Override
-    public void TitleBar(String text, String sym, int len) {
+    public void titleBar(String text, String sym, int len) {
 
         for (int i=0;i<len;i++) System.out.print(sym);
         System.out.print("\n");
@@ -86,7 +97,7 @@ public class Display implements Elements{
     *
     * */
     @Override
-    public void ListBox(String text1, String text2,
+    public void listBox(String text1, String text2,
                         String text3, String text4, String text5, int len) {
 
         int len1 = text1.length(),len2 = text2.length(),
@@ -119,7 +130,7 @@ public class Display implements Elements{
     * # Menu 1                                  #
     *
     * */
-    public void SideLine(String text){
+    public void sideLine(String text){
         for (int i=0;i<90-(text.length());i++) {
             if (i == 0 || i == (89-text.length())){
                 System.out.print("#");
@@ -137,19 +148,21 @@ public class Display implements Elements{
     *
     * */
     @Override
-    public void Menu() {
-        TitleBar("MENU","~",90);
-        SideLine("1. Data Indonesia");
+    public void menu() {
+        titleBar("MENU","~",90);
+        sideLine("1. Data Indonesia");
         System.out.println();
-        SideLine("2. Data Semua Negara");
+        sideLine("2. Data Semua Negara");
         System.out.println();
-        SideLine("3. Data Berdasarkan Negara");
+//        SideLine("3. Data Berdasarkan Negara");
+//        System.out.println();
+        sideLine("3. Data Provinsi Indonesia");
         System.out.println();
-        SideLine("4. Data Provinsi Indonesia");
+        sideLine("4. Total Kasus Seluruh Dunia");
         System.out.println();
-        SideLine("5. Total Kasus Seluruh Dunia");
+        sideLine("5. Summary Indoensia");
         System.out.println();
-        SideLine("6. Keluar Dari Program");
+        sideLine("6. Keluar Dari Program");
         System.out.print("\nSilahkan pilih menu : ");
 
 
@@ -160,14 +173,14 @@ public class Display implements Elements{
     * . . . .  setiap titik wait 300 ms
     * */
     @Override
-    public int DotRecursive(int n) throws Exception{
+    public int dotRecursive(int n) throws Exception{
         if (n==0) {
             return 1;
 
         }else{
             System.out.print(".");
             Thread.sleep(300);
-            return DotRecursive(n-1);
+            return dotRecursive(n-1);
         }
     }
 
@@ -176,10 +189,10 @@ public class Display implements Elements{
     * Loading . . . .
     * */
     @Override
-    public void Loading() throws Exception {
+    public void loading() throws Exception {
         clearConsole();
         System.out.print("Loading");
-        DotRecursive(10);
+        dotRecursive(10);
         System.out.print("\n");
     }
 

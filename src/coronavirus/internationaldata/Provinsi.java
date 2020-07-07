@@ -14,10 +14,10 @@ public class Provinsi {
     private String Positif;
 
     @SerializedName("Kasus_Semb")
-    private String Sembuh;
+    private int Sembuh;
 
     @SerializedName("Kasus_Meni")
-    private String Meninggal;
+    private int Meninggal;
 
 
     public String getKodeProv() {
@@ -32,11 +32,11 @@ public class Provinsi {
         return Positif;
     }
 
-    public String getSembuh() {
+    public int getSembuh() {
         return Sembuh;
     }
 
-    public String getMeninggal() {
+    public int getMeninggal() {
         return Meninggal;
     }
 }
